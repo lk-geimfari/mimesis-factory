@@ -1,6 +1,7 @@
 ## mimesis_factory
 
 [![Python](https://img.shields.io/badge/python-3.5%2C%203.6-brightgreen.svg)](https://badge.fury.io/py/mimesis)
+[![PyPI version](https://badge.fury.io/py/mimesis-factory.svg)](https://badge.fury.io/py/mimesis-factory)
 
 <a href="https://github.com/mimesis-lab/mimesis-factory">
     <p align="center">
