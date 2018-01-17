@@ -1,10 +1,8 @@
 from distutils.core import setup
 
-import mimesis_factory
-
 setup(
     name='mimesis_factory',
-    version=mimesis_factory.__version__,
+    version='0.0.1',
     packages=['mimesis_factory'],
     url='https://github.com/mimesis-lab/mimesis-factory',
     license='MIT',
