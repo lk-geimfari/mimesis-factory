@@ -2,7 +2,7 @@ from distutils.core import setup
 
 setup(
     name='mimesis_factory',
-    version='0.0.1',
+    version='0.0.2',
     packages=['mimesis_factory'],
     url='https://github.com/mimesis-lab/mimesis-factory',
     license='MIT',
