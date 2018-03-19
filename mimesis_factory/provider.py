@@ -1,20 +1,20 @@
 from mimesis.providers import (
-    Address, Business, ClothingSizes,
+    Address, Business, ClothingSize,
     Code, Datetime, Development, File,
     Food, Hardware, Internet, Numbers,
-    Path, Personal, Science, Structured,
+    Path, Person, Science, Structure,
     Transport, Text, UnitSystem, Games,
     Cryptographic,
 )
 
 
 class LocaleDepProvider(Address, Business, Code, Datetime,
-                        Personal, Science, Text, Food):
+                        Person, Science, Text, Food):
     pass
 
 
-class CommonProvider(ClothingSizes, Development, File, Hardware,
-                     Internet, Numbers, Path, Structured, Transport,
+class CommonProvider(ClothingSize, Development, File, Hardware,
+                     Internet, Numbers, Path, Structure, Transport,
                      UnitSystem, Games, Cryptographic):
     pass
 
