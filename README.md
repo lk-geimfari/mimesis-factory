@@ -10,7 +10,6 @@
 </a>
 
 
-
 ## Description
 
 Mimesis integration with `factory_boy`.
@@ -21,14 +20,12 @@ Mimesis integration with `factory_boy`.
 ➜  pip install mimesis_factory
 ```
 
+
 ## Usage
 
-Just look at the example below and you’ll understand how it works:
+Look at the example below and you’ll understand how it works:
 
 ```python
-import datetime
-import random
-
 class Account(object):
     def __init__(self, username, email, name, surname, age):
         self.username = username
@@ -36,19 +33,15 @@ class Account(object):
         self.name = name
         self.surname = surname
         self.age = age
-        self.password = ''.join(str(random.randint(0, 10)) for _ in range(10))
-        self.date_joined = datetime.datetime.today()
-
-    def __str__(self):
-        return '{} ({})'.format(self.username, self.email)
 ```
 
 
-Simply use the `Mimesis` class from `mimesis_factory`:
+Now, use the `MimesisField` class from `mimesis_factory`
+to define fake data how fake data is generated:
 
 ```python
 import factory
-from mimesis_factory import Mimesis
+from mimesis_factory import MimesisField
 
 from account import Account
 
@@ -56,15 +49,19 @@ class AccountFactory(factory.Factory):
     class Meta:
         model = Account
         
-    username = Mimesis('username', template='l_d')
-    name = Mimesis('name', gender='female')
-    surname = Mimesis('surname', gender='female')
-    age = Mimesis('age', minimum=18, maximum=28)
+    username = MimesisField('username', template='l_d')
+    name = MimesisField('name', gender='female')
+    surname = MimesisField('surname', gender='female')
+    age = MimesisField('age', minimum=18, maximum=90)
     email = factory.LazyAttribute(
         lambda o: '%s@example.org' % o.username
     )
-    access_token = Mimesis('token', entropy=32)
+    access_token = MimesisField('token', entropy=32)
 ```
+
+We also recommend to use [`pytest-factoryboy`](https://github.com/pytest-dev/pytest-factoryboy).
+This way it will be possible to integrate your factories into `pytest` fixtures.
+
 
 ## License
 
