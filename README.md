@@ -1,5 +1,7 @@
 ## mimesis_factory
 
+[![Build Status](https://travis-ci.org/mimesis-lab/mimesis-factory.svg?branch=master)](https://travis-ci.org/mimesis-lab/mimesis-factory)
+[![Coverage](https://coveralls.io/repos/github/mimesis-lab/mimesis-factory/badge.svg?branch=master)](https://coveralls.io/github/mimesis-lab/mimesis-factory?branch=master)
 [![Python](https://img.shields.io/badge/python-3.5%2C%203.6-brightgreen.svg)](https://badge.fury.io/py/mimesis)
 [![PyPI version](https://badge.fury.io/py/mimesis-factory.svg)](https://badge.fury.io/py/mimesis-factory)
 
@@ -12,7 +14,7 @@
 
 ## Description
 
-Mimesis integration with `factory_boy`.
+Mimesis integration for [`factory_boy`](https://github.com/FactoryBoy/factory_boy).
 
 ## Installation
 
@@ -35,9 +37,8 @@ class Account(object):
         self.age = age
 ```
 
-
 Now, use the `MimesisField` class from `mimesis_factory`
-to define fake data how fake data is generated:
+to define how fake data is generated:
 
 ```python
 import factory
@@ -58,6 +59,9 @@ class AccountFactory(factory.Factory):
     )
     access_token = MimesisField('token', entropy=32)
 ```
+
+
+## pytest
 
 We also recommend to use [`pytest-factoryboy`](https://github.com/pytest-dev/pytest-factoryboy).
 This way it will be possible to integrate your factories into `pytest` fixtures.
