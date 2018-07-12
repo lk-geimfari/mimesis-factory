@@ -7,7 +7,7 @@
 
 <a href="https://github.com/mimesis-lab/mimesis-factory">
     <p align="center">
-        <img src="/media/logo.png">
+        <img src="https://raw.githubusercontent.com/mimesis-lab/mimesis-factory/master/media/logo.png?raw=true">
     </p>
 </a>
 
