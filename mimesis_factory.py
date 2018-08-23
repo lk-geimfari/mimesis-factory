@@ -51,7 +51,9 @@ class MimesisField(declarations.BaseDeclaration):
         kwargs.update(self.kwargs)
         kwargs.update(extra)
 
-        mimesis = self._get_cached_instance(locale=self.locale)
+        providers = step.builder.factory_meta.declarations.get('providers')
+        mimesis = self._get_cached_instance(locale=self.locale,
+                                            providers=providers)
         return mimesis(self.field, **kwargs)
 
     @classmethod
@@ -70,11 +72,12 @@ class MimesisField(declarations.BaseDeclaration):
             cls._DEFAULT_LOCALE = old_locale
 
     @classmethod
-    def _get_cached_instance(cls, locale=None):
+    def _get_cached_instance(cls, locale=None, providers=None):
         if locale is None:
             locale = cls._DEFAULT_LOCALE
 
-        if locale not in cls._CACHED_INSTANCES:
-            cls._CACHED_INSTANCES[locale] = Field(locale)
+        key = (locale, providers)
+        if key not in cls._CACHED_INSTANCES:
+            cls._CACHED_INSTANCES[key] = Field(locale, providers=providers)
 
-        return cls._CACHED_INSTANCES[locale]
+        return cls._CACHED_INSTANCES[key]
