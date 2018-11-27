@@ -453,14 +453,14 @@ description = "Python Data Validation for Humans™."
 name = "validators"
 optional = false
 python-versions = "*"
-version = "0.12.2"
+version = "0.12.3"
 
 [package.dependencies]
 decorator = ">=3.4.0"
 six = ">=1.4.0"
 
 [metadata]
-content-hash = "76e57b56a70912ae0db2eaadbb480d29b576e81ca754fd4b49f07e3003f71842"
+content-hash = "1db8847dc830499fc992d44a06881033df076d8da0ac6c8cce08d09ab834210e"
 python-versions = "^3.5 || ^3.6"
 
 [metadata.hashes]
@@ -507,4 +507,4 @@ python-dateutil = ["063df5763652e21de43de7d9e00ccf239f953a832941e37be541614732cd
 six = ["70e8a77beed4562e7f14fe23a786b54f6296e34344c23bc42f07b15018ff98e9", "832dc0e10feb1aa2c68dcc57dbb658f1c7e65b9b61af69048abc87a2db00a0eb"]
 snowballstemmer = ["919f26a68b2c17a7634da993d91339e288964f93c274f1343e3bbbe2096e1128", "9f3bcd3c401c3e862ec0ebe6d2c069ebc012ce142cce209c098ccb5b09136e89"]
 text-unidecode = ["5a1375bb2ba7968740508ae38d92e1f889a0832913cb1c447d5e2046061a396d", "801e38bd550b943563660a91de8d4b6fa5df60a542be9093f7abf819f86050cc"]
-validators = ["172ac45f7d1944ce4beca3c5c53ca7c83e9759e39fd3fedc1cf28e2130268706"]
+validators = ["cb9c61250ee23a68e8b5f75319c3cd3668af83112fed4f72dfe352f65fe5387c"]
