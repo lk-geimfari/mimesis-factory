@@ -3,7 +3,7 @@
 import contextlib
 
 from factory import declarations
-from mimesis import config
+from mimesis import locales
 from mimesis.schema import Field
 
 
@@ -19,7 +19,7 @@ class MimesisField(declarations.BaseDeclaration):
     """
 
     _CACHED_INSTANCES = {}
-    _DEFAULT_LOCALE = config.DEFAULT_LOCALE
+    _DEFAULT_LOCALE = locales.DEFAULT_LOCALE
 
     def __init__(self, field, locale=None, **kwargs):
         """
