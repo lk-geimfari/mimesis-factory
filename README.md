@@ -3,7 +3,8 @@
 [![Build Status](https://travis-ci.org/mimesis-lab/mimesis-factory.svg?branch=master)](https://travis-ci.org/mimesis-lab/mimesis-factory)
 [![Coverage](https://coveralls.io/repos/github/mimesis-lab/mimesis-factory/badge.svg?branch=master)](https://coveralls.io/github/mimesis-lab/mimesis-factory?branch=master)
 [![Python](https://img.shields.io/badge/python-3.5%2C%203.6-brightgreen.svg)](https://badge.fury.io/py/mimesis)
-[![PyPI version](https://badge.fury.io/py/mimesis-factory.svg)](https://badge.fury.io/py/mimesis-factory)
+[![PyPI version](https://badge.fury.io/py/mimesis-factory.svg)](https://badge.fury.io/py/mimesis-factory) [![wemake-python-styleguide](https://img.shields.io/badge/style-wemake-000000.svg)](https://github.com/wemake-services/wemake-python-styleguide)
+
 
 <a href="https://github.com/mimesis-lab/mimesis-factory">
     <p align="center">
@@ -47,9 +48,9 @@ from mimesis_factory import MimesisField
 from account import Account
 
 class AccountFactory(factory.Factory):
-    class Meta:
+    class Meta(object):
         model = Account
-        
+
     username = MimesisField('username', template='l_d')
     name = MimesisField('name', gender='female')
     surname = MimesisField('surname', gender='female')
@@ -69,4 +70,4 @@ This way it will be possible to integrate your factories into `pytest` fixtures.
 
 ## License
 
-mimesis_factory is released under the MIT License.
+`mimesis_factory` is released under the MIT License.

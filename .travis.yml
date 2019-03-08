@@ -1,14 +1,16 @@
 language: python
 
 python:
-  - 3.5
   - 3.6
+  - 3.7
 
 install:
   - pip install poetry
   - poetry install
 
 script:
+  - flake8 mimesis_factory.py tests
+  - mypy mimesis_factory.py
   - pytest
 
 after_success:

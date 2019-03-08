@@ -19,7 +19,7 @@ class Guest(object):
 
 @register
 class GuestFactory(factory.Factory):
-    class Meta:
+    class Meta(object):
         model = Guest
 
     full_name = MimesisField('full_name', gender=Gender.FEMALE)
@@ -40,7 +40,7 @@ def test_guest_factory_different_data(guest_factory):
 
 def test_guest_factory_create_batch(guest_factory):
     guests = guest_factory.create_batch(50)
-    names = {g.full_name for g in guests}
+    names = {guest.full_name for guest in guests}
 
     assert len(guests) == len(names)
 
@@ -51,7 +51,7 @@ def test_guest_factory_create_batch(guest_factory):
 
 def test_guest_factory_build_batch(guest_factory):
     guests = guest_factory.build_batch(50)
-    names = {g.full_name for g in guests}
+    names = {guest.full_name for guest in guests}
 
     assert len(guests) == len(names)
 

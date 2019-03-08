@@ -16,7 +16,7 @@ class Person(object):
 
 @register
 class PersonFactory(factory.Factory):
-    class Meta:
+    class Meta(object):
         model = Person
 
     full_name_en = MimesisField('full_name')

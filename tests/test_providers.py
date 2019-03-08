@@ -18,7 +18,7 @@ class Guest(object):
 
 @register
 class FactoryWithNoProviders(factory.Factory):
-    class Meta:
+    class Meta(object):
         model = Guest
 
     full_name = MimesisField('full_name', gender=Gender.FEMALE)
@@ -27,10 +27,10 @@ class FactoryWithNoProviders(factory.Factory):
 
 @register
 class FactoryWithProviders(factory.Factory):
-    class Meta:
+    class Meta(object):
         model = Guest
 
-    class Params:
+    class Params(object):
         providers = (builtins.RussiaSpecProvider,)
 
     full_name = MimesisField('full_name', gender=Gender.FEMALE)

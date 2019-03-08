@@ -19,15 +19,18 @@ class Account(object):
 
 @register
 class AccountFactory(factory.Factory):
-    class Meta:
+    class Meta(object):
         model = Account
         exclude = ('_domain',)
 
-    uid = factory.Sequence(lambda n: n + 1)
+    uid = factory.Sequence(lambda order: order + 1)
     username = MimesisField('username')
     _domain = MimesisField('top_level_domain')
     email = factory.LazyAttribute(
-        lambda obj: '{0}@example{1}'.format(obj.username, obj._domain),
+        lambda instance: '{0}@example{1}'.format(
+            instance.username,
+            instance._domain,  # noqa: Z441
+        ),
     )
 
 
@@ -55,8 +58,8 @@ def test_account_factory_overrides(account_factory):
 
 def test_account_factory_create_batch(account_factory):
     accounts = account_factory.create_batch(10)
-    uids = {a.uid for a in accounts}
-    usernames = {a.username for a in accounts}
+    uids = {account.uid for account in accounts}
+    usernames = {account.username for account in accounts}
 
     assert len(accounts) == len(uids)
     assert len(accounts) == len(usernames)
@@ -70,8 +73,8 @@ def test_account_factory_create_batch(account_factory):
 
 def test_account_factory_build_batch(account_factory):
     accounts = account_factory.build_batch(10)
-    uids = {a.uid for a in accounts}
-    usernames = {a.username for a in accounts}
+    uids = {account.uid for account in accounts}
+    usernames = {account.username for account in accounts}
 
     assert len(accounts) == len(uids)
     assert len(accounts) == len(usernames)
@@ -120,4 +123,4 @@ def test_account_multiple_data_overrides(account):
 
 def test_account_excluded_data(account):
     with pytest.raises(AttributeError):
-        print(account._domain)
+        print(account._domain)  # noqa: Z441
