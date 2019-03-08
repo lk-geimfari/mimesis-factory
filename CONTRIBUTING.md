@@ -8,16 +8,29 @@ To install them you would need to run two commands:
 
 ```bash
 poetry install
-poetry develop
 ```
 
 ## Tests
 
-We use `pytest` and `flake8` for quality control.
+We use `pytest`, `mypy`, and `flake8` for quality control.
 To run all tests:
 
 ```bash
 pytest
+```
+
+We also use [`wemake-python-styleguide`](https://github.com/wemake-services/wemake-python-styleguide) to lint our `python` code.
+
+To run linting:
+
+```bash
+flake8 mimesis_factory.py tests
+```
+
+And to type check your code:
+
+```bash
+mypy mimesis_factory.py
 ```
 
 Make sure you have followed all the steps before submitting your PR.

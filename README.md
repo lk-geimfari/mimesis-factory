@@ -47,6 +47,7 @@ from mimesis_factory import MimesisField
 
 from account import Account
 
+
 class AccountFactory(factory.Factory):
     class Meta(object):
         model = Account
@@ -56,7 +57,7 @@ class AccountFactory(factory.Factory):
     surname = MimesisField('surname', gender='female')
     age = MimesisField('age', minimum=18, maximum=90)
     email = factory.LazyAttribute(
-        lambda o: '%s@example.org' % o.username
+        lambda instance: '{0}@example.org'.format(instance.username)
     )
     access_token = MimesisField('token', entropy=32)
 ```
