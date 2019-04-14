@@ -14,7 +14,7 @@
 
 ## Description
 
-Mimesis integration for [`factory_boy`](https://github.com/FactoryBoy/factory_boy).
+[Mimesis](https://github.com/lk-geimfari/mimesis) integration for [`factory_boy`](https://github.com/FactoryBoy/factory_boy).
 
 ## Installation
 
