@@ -744,7 +744,7 @@ description = "Python Data Validation for Humans™."
 name = "validators"
 optional = false
 python-versions = "*"
-version = "0.12.6"
+version = "0.13.0"
 
 [package.dependencies]
 decorator = ">=3.4.0"
@@ -791,7 +791,7 @@ pep8-naming = ">=0.7,<0.9"
 typing_extensions = ">=3.6,<4.0"
 
 [metadata]
-content-hash = "5242e3a29eed8a29cbe8dea352e1e1e3b2790126c4dc5623c2023606cd63d0e3"
+content-hash = "c828a2f26b12cccd6564e515ed62bc8c84b7b5f772796f8231ce7ef63daa98bd"
 python-versions = "^3.6"
 
 [metadata.hashes]
@@ -867,6 +867,6 @@ typed-ast = ["035a54ede6ce1380599b2ce57844c6554666522e376bd111eb940fbc7c3dad23",
 typing = ["4027c5f6127a6267a435201981ba156de91ad0d1d98e9ddc2aa173453453492d", "57dcf675a99b74d64dacf6fba08fb17cf7e3d5fdff53d4a30ea2a5e7e52543d4", "a4c8473ce11a65999c8f59cb093e70686b6c84c98df58c1dae9b3b196089858a"]
 typing-extensions = ["07b2c978670896022a43c4b915df8958bec4a6b84add7f2c87b2b728bda3ba64", "f3f0e67e1d42de47b5c67c32c9b26641642e9170fe7e292991793705cd5fef7c", "fb2cd053238d33a8ec939190f30cfd736c00653a85a2919415cecf7dc3d9da71"]
 urllib3 = ["4c291ca23bbb55c76518905869ef34bdd5f0e46af7afe6861e8375643ffee1a0", "9a247273df709c4fedb38c711e44292304f73f39ab01beda9f6b9fc375669ac3"]
-validators = ["f6aca085caf9e13d5a0fd8ddb3afbea2541c0ca9477b1fb8098c797dd812ff64"]
+validators = ["ea9bf8bf22aa692c205e12830d90b3b93950e5122d22bed9eb2f2fece0bba298"]
 wcwidth = ["3df37372226d6e63e1b1e1eda15c594bca98a22d33a23832a90998faa96bc65e", "f4ebe71925af7b40a864553f761ed559b43544f8f71746c2d756c7fe788ade7c"]
 wemake-python-styleguide = ["0509b114f0446a30595e99d25566669c9f1ad9972b9d322ef27a22b8db19ba20", "0a94915dd1c48ca541a78a73b1c7e65cc023c3bd1c5d10b0a3f9dd23f2d4c4e6"]
