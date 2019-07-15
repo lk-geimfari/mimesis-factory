@@ -7,7 +7,7 @@ from pytest_factoryboy import register
 
 from mimesis_factory import MimesisField
 
-TEST_USERNAMES = ['sobolevn', 'lk-geimfari']
+TEST_USERNAMES = ('sobolevn', 'lk-geimfari')
 
 
 class Account(object):

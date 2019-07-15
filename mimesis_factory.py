@@ -32,7 +32,7 @@ class MimesisField(declarations.BaseDeclaration):
         Args:
             field: field name to be passed to `Field` from `Mimesis`.
             locale: locale to use. This parameter has the highest priority
-                over other locale parameters.
+            over other locale parameters.
             kwargs: optional parameters that would be passed to `Field`.
 
         """
@@ -66,9 +66,9 @@ class MimesisField(declarations.BaseDeclaration):
         Remember, that implicit locales would not be overridden.
         """
         old_locale = cls._default_locale
-        cls._default_locale = locale
+        cls._default_locale = locale  # noqa: Z427
         yield
-        cls._default_locale = old_locale
+        cls._default_locale = old_locale  # noqa: Z427
 
     @classmethod
     def _get_cached_instance(
