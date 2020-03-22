@@ -1,22 +1,22 @@
 language: python
+dist: xenial
 
-matrix:
-  fast_finish: true
-  include:
-    - python: 3.6
-    - python: 3.7
-      dist: xenial
-      sudo: true
+python:
+  - python: 3.6
+  - python: 3.7
+  - python: 3.8
 
 before_install:
+  # Cleaning environment:
   - pip freeze | xargs pip uninstall -y
-  - pip install poetry
+  # Installing poetry:
+  - curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python
+  - source "$HOME/.poetry/env"
 
-install:
-  - poetry install
+install: poetry install
 
 script:
-  - poetry run flake8 mimesis_factory.py tests
+  - poetry run flake8 .
   - poetry run mypy mimesis_factory.py
   - poetry run pytest
   - poetry check

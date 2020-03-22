@@ -29,7 +29,7 @@ class AccountFactory(factory.Factory):
     email = factory.LazyAttribute(
         lambda instance: '{0}@example{1}'.format(
             instance.username,
-            instance._domain,  # noqa: Z441
+            instance._domain,  # noqa: WPS437
         ),
     )
 
@@ -107,10 +107,9 @@ def test_account_data_overrides(account):
     assert username in TEST_USERNAMES
 
 
-@pytest.mark.parametrize(
-    'account__username,account__uid',
-    zip(TEST_USERNAMES, range(10000, 10003)),
-)
+@pytest.mark.parametrize(('account__username', 'account__uid'), zip(
+    TEST_USERNAMES, range(10000, 10003),
+))
 def test_account_multiple_data_overrides(account):
     assert account.username in TEST_USERNAMES
     assert 10000 <= account.uid < 10003
@@ -123,4 +122,4 @@ def test_account_multiple_data_overrides(account):
 
 def test_account_excluded_data(account):
     with pytest.raises(AttributeError):
-        print(account._domain)  # noqa: Z441
+        account._domain  # noqa: WPS428, WPS437

@@ -53,4 +53,4 @@ def test_data_with_override_defined_locale(person_factory):
     for russian_letter in person.full_name_ru.replace(' ', ''):
         # Keyword locale has a priority over override:
         # Some surnames in some locales contains «'» in surname.
-        assert russian_letter not in string.ascii_letters + "'"
+        assert russian_letter not in {*string.ascii_letters, "'"}

@@ -1,17 +1,22 @@
 [build-system]
-requires = ["poetry>=0.12"]
+requires = ["poetry>=1.0"]
 build-backend = "poetry.masonry.api"
+
+
+[tool.nitpick]
+style = "https://raw.githubusercontent.com/wemake-services/wemake-python-styleguide/master/styles/nitpick-style-wemake.toml"
+
 
 [tool.poetry]
 name = "mimesis_factory"
-version = "1.0.0"
+version = "1.1.0"
 description = "Mimesis integration with factory_boy"
 
 license = "MIT"
 
 authors = [
-    "Nikita Sobolev <mail@sobolevn.me>",
-    "Líkið Geimfari <likid.geimfari@gmail.com>"
+  "Nikita Sobolev <mail@sobolevn.me>",
+  "Líkið Geimfari <likid.geimfari@gmail.com>"
 ]
 
 readme = 'README.md'
@@ -31,6 +36,7 @@ keywords = [
 
 [tool.poetry.dependencies]
 python = "^3.6"
+
 factory-boy = "^2.11"
 mimesis = "^3.1"
 
@@ -39,8 +45,11 @@ pytest-cov = "^2.8"
 pytest-factoryboy = "^2.0"
 pytest-randomly = "^3.1"
 pytest = "^5.3"
-wemake-python-styleguide = "^0.10"
-flake8-pytest = "^1.3"
+
+wemake-python-styleguide = "^0.13"
+flake8-pytest-style = "^0.5"
+nitpick = "^0.21.3"
+
 validators = "^0.14.1"
-mypy = "^0.750"
+mypy = "^0.770"
 safety = "^1.8"

@@ -27,3 +27,9 @@ def test_direct_factory():
 
     assert len(users) == len(emails)
     assert len(users) == len(uids)
+
+
+def test_factory_extras():
+    user = UserFactory(email='custom@mail.ru')
+
+    assert user.email == 'custom@mail.ru'

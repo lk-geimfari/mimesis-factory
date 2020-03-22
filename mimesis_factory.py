@@ -1,13 +1,24 @@
 # -*- coding: utf-8 -*-
 
 import contextlib
-from typing import Any, ClassVar, Dict, Optional, Tuple
+from typing import (
+    Any,
+    ClassVar,
+    Dict,
+    Iterable,
+    Iterator,
+    Optional,
+    Tuple,
+    Type,
+)
 
 from factory import declarations
 from mimesis import locales
-from mimesis.schema import Field
+from mimesis.providers.base import BaseProvider
+from mimesis.schema import Field, Generic
 
 _CacheKey = Tuple[str, Any]
+_Providers = Iterable[Type[BaseProvider]]
 
 
 class MimesisField(declarations.BaseDeclaration):
@@ -21,19 +32,19 @@ class MimesisField(declarations.BaseDeclaration):
     _cached_instances: ClassVar[Dict[_CacheKey, Field]] = {}
     _default_locale: ClassVar[str] = locales.DEFAULT_LOCALE
 
-    def __init__(self, field, locale=None, **kwargs) -> None:
+    def __init__(
+        self, field: str, locale: Optional[str] = None, **kwargs,
+    ) -> None:
         """
         Creates a field instance.
 
-        The created field is lazy.
-        It also receives build time parameters.
-        This parameters are not applied yet.
+        The created field is lazy. It also receives build time parameters.
+        These parameters are not applied yet.
 
         Args:
-            field: field name to be passed to `Field` from `Mimesis`.
-            locale: locale to use. This parameter has the highest priority
-            over other locale parameters.
-            kwargs: optional parameters that would be passed to `Field`.
+            field: name to be passed to ``Field`` from ``Mimesis``.
+            locale: locale to use. This parameter has the highest priority.
+            kwargs: optional parameters that would be passed to ``Field``.
 
         """
         super().__init__()
@@ -41,14 +52,13 @@ class MimesisField(declarations.BaseDeclaration):
         self.kwargs = kwargs
         self.field = field
 
-    def evaluate(self, instance, step, extra):
+    def evaluate(
+        self, instance, step, extra: Optional[Dict[str, Any]],
+    ) -> Generic:
         """Evaluates the lazy field."""
-        if extra is None:
-            extra = {}
-
         kwargs: Dict[str, Any] = {}
         kwargs.update(self.kwargs)
-        kwargs.update(extra)
+        kwargs.update(extra or {})
 
         providers = step.builder.factory_meta.declarations.get('providers')
         mimesis = self._get_cached_instance(
@@ -59,23 +69,23 @@ class MimesisField(declarations.BaseDeclaration):
 
     @classmethod
     @contextlib.contextmanager
-    def override_locale(cls, locale: str):
+    def override_locale(cls, locale: str) -> Iterator[None]:
         """
         Overrides unspecified locales.
 
         Remember, that implicit locales would not be overridden.
         """
         old_locale = cls._default_locale
-        cls._default_locale = locale  # noqa: Z427
+        cls._default_locale = locale  # noqa: WPS601
         yield
-        cls._default_locale = old_locale  # noqa: Z427
+        cls._default_locale = old_locale  # noqa: WPS601
 
     @classmethod
     def _get_cached_instance(
         cls,
         locale: Optional[str] = None,
-        providers=None,
-    ):
+        providers: Optional[_Providers] = None,
+    ) -> Field:
         if locale is None:
             locale = cls._default_locale
 
