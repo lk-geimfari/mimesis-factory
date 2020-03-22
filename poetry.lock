@@ -658,7 +658,7 @@ description = "Mimesis: fake data generator."
 name = "mimesis"
 optional = false
 python-versions = "*"
-version = "3.3.0"
+version = "4.0.0"
 
 [[package]]
 category = "dev"
@@ -1224,7 +1224,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "a73223f71e3a90c6dac8904cfb4cb76ce4ff87d969ee322529bba4fc78bdb33f"
+content-hash = "efba2ab23ffce9e787742b45e077fa0af1d25bc2802e89ed0f5770402c2cdc5d"
 python-versions = "^3.6"
 
 [metadata.files]
@@ -1477,8 +1477,8 @@ mccabe = [
     {file = "mccabe-0.6.1.tar.gz", hash = "sha256:dd8d182285a0fe56bace7f45b5e7d1a6ebcbf524e8f3bd87eb0f125271b8831f"},
 ]
 mimesis = [
-    {file = "mimesis-3.3.0-py3-none-any.whl", hash = "sha256:faf4eed0abea190e77257f1c8d9fc8278784bb0de889e365e3af462aa53f0416"},
-    {file = "mimesis-3.3.0.tar.gz", hash = "sha256:4b8fc414bd101109615fa8b6ad49f1811199e2745a4e9ef527193a4ab69637fc"},
+    {file = "mimesis-4.0.0-py3-none-any.whl", hash = "sha256:9a4f001f95b9cceb419266e28b422e67fae71995e16a6ab641ff14dd139f5fa3"},
+    {file = "mimesis-4.0.0.tar.gz", hash = "sha256:d59ca48d4118d391704a525cef4e33fa219f3d9c4f9a95b7ec2a0e0c88e048a4"},
 ]
 more-itertools = [
     {file = "more-itertools-8.2.0.tar.gz", hash = "sha256:b1ddb932186d8a6ac451e1d95844b382f55e12686d51ca0c68b6f61f2ab7a507"},

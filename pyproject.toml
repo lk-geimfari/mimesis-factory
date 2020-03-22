@@ -38,7 +38,7 @@ keywords = [
 python = "^3.6"
 
 factory-boy = "^2.11"
-mimesis = "^3.1"
+mimesis = "^4.0"
 
 [tool.poetry.dev-dependencies]
 pytest-cov = "^2.8"
