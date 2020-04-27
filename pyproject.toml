@@ -52,4 +52,4 @@ nitpick = "^0.21.3"
 
 validators = "^0.14.1"
 mypy = "^0.770"
-safety = "^1.8"
+safety = "^1.9"
