@@ -1,5 +1,6 @@
 # Version history
 
+
 ## Version 1.1.0
 
 ### Features
@@ -10,6 +11,7 @@
 ### Misc
 
 - Updates `poetry` to `1.0`
+
 
 ## Version 1.0.0
 
