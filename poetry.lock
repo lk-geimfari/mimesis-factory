@@ -712,7 +712,7 @@ description = "Pytest plugin to randomly order tests and control random.seed."
 name = "pytest-randomly"
 optional = false
 python-versions = ">=3.5"
-version = "3.3.1"
+version = "3.4.0"
 
 [package.dependencies]
 pytest = "*"
@@ -996,7 +996,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "cd39eb959e0458a483a7f06b16f96cb028ce9917a7cf61238ab623142cb69901"
+content-hash = "96a9a006ee160b7408b5c7df72cacbf472d8dbbef52e4996b646bf2171ca7119"
 python-versions = "^3.6"
 
 [metadata.files]
@@ -1283,8 +1283,8 @@ pytest-factoryboy = [
     {file = "pytest-factoryboy-2.0.3.tar.gz", hash = "sha256:ffef3fb7ddec1299d3df0d334846259023f3d1da5ab887ad880139a8253a5a1a"},
 ]
 pytest-randomly = [
-    {file = "pytest-randomly-3.3.1.tar.gz", hash = "sha256:568b6a3bd251b566e8d99fc7bcb15c3c39561babd07e16412563b7dab1b0290a"},
-    {file = "pytest_randomly-3.3.1-py3-none-any.whl", hash = "sha256:9b06429c877b3aab360c7cf698f2a65dbe75db1b1ed0ab02dc3bb47f3487e469"},
+    {file = "pytest-randomly-3.4.0.tar.gz", hash = "sha256:e44a69623237e47cc4ee77da9c04c6b505ed1a7b00656dc1409f8344c707b87b"},
+    {file = "pytest_randomly-3.4.0-py3-none-any.whl", hash = "sha256:4e02887ba52f021cc8d5429e91e93be2b5df4adf38bf1715c7c153968b260b59"},
 ]
 python-dateutil = [
     {file = "python-dateutil-2.8.1.tar.gz", hash = "sha256:73ebfe9dbf22e832286dafa60473e4cd239f8592f699aa5adaf10050e6e1823c"},
