@@ -50,6 +50,6 @@ wemake-python-styleguide = "^0.14"
 flake8-pytest-style = "^1.2"
 nitpick = "^0.22"
 
-validators = "^0.14"
+validators = "^0.16"
 mypy = "^0.782"
 safety = "^1.9"
