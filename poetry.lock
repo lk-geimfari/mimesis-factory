@@ -944,8 +944,8 @@ category = "dev"
 description = "Python Data Validation for Humans™."
 name = "validators"
 optional = false
-python-versions = "*"
-version = "0.14.3"
+python-versions = ">=3.4"
+version = "0.17.1"
 
 [package.dependencies]
 decorator = ">=3.4.0"
@@ -1001,7 +1001,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "650bc6e483b6aa05be9c8078e93b61e45d6e033706cb12e8b8f07e7562124ddc"
+content-hash = "5d86076eed111bc161343a0c7a7885993b4c45f7771c9c7c0a56df61a7bf4ea0"
 python-versions = "^3.6"
 
 [metadata.files]
@@ -1416,7 +1416,8 @@ urllib3 = [
     {file = "urllib3-1.25.9.tar.gz", hash = "sha256:3018294ebefce6572a474f0604c2021e33b3fd8006ecd11d62107a5d2a963527"},
 ]
 validators = [
-    {file = "validators-0.14.3.tar.gz", hash = "sha256:6a0d9502219aee486f1ee12d8a9635e4a56f3dbcfa204b4e0de3a038ae35f34f"},
+    {file = "validators-0.17.1-py3-none-any.whl", hash = "sha256:898b6b8197fbc320daf25d3b32fa928fd25e225c33790cb58ed54b48aebe1858"},
+    {file = "validators-0.17.1.tar.gz", hash = "sha256:401cb441dd61bb1a03b10c8a3a884642409e22a2a19e03bbfc4891e0ddbc7268"},
 ]
 wemake-python-styleguide = [
     {file = "wemake-python-styleguide-0.14.1.tar.gz", hash = "sha256:e13dc580fa56b7b548de8da170bccb8ddff2d4ab026ca987db8a9893bf8a7b5b"},
