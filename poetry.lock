@@ -510,7 +510,7 @@ description = "Mimesis: fake data generator."
 name = "mimesis"
 optional = false
 python-versions = "*"
-version = "4.0.0"
+version = "4.1.1"
 
 [[package]]
 category = "dev"
@@ -1207,8 +1207,7 @@ mccabe = [
     {file = "mccabe-0.6.1.tar.gz", hash = "sha256:dd8d182285a0fe56bace7f45b5e7d1a6ebcbf524e8f3bd87eb0f125271b8831f"},
 ]
 mimesis = [
-    {file = "mimesis-4.0.0-py3-none-any.whl", hash = "sha256:9a4f001f95b9cceb419266e28b422e67fae71995e16a6ab641ff14dd139f5fa3"},
-    {file = "mimesis-4.0.0.tar.gz", hash = "sha256:d59ca48d4118d391704a525cef4e33fa219f3d9c4f9a95b7ec2a0e0c88e048a4"},
+    {file = "mimesis-4.1.1.tar.gz", hash = "sha256:e82e61f43dd9d24ece3c74c0d6095af1432dc2851d90c7eb9c4d401f046d563d"},
 ]
 more-itertools = [
     {file = "more-itertools-8.2.0.tar.gz", hash = "sha256:b1ddb932186d8a6ac451e1d95844b382f55e12686d51ca0c68b6f61f2ab7a507"},
