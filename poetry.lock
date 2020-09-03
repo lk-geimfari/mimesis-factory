@@ -945,7 +945,7 @@ description = "Python Data Validation for Humans™."
 name = "validators"
 optional = false
 python-versions = ">=3.4"
-version = "0.18.0"
+version = "0.18.1"
 
 [package.dependencies]
 decorator = ">=3.4.0"
@@ -1416,8 +1416,8 @@ urllib3 = [
     {file = "urllib3-1.25.9.tar.gz", hash = "sha256:3018294ebefce6572a474f0604c2021e33b3fd8006ecd11d62107a5d2a963527"},
 ]
 validators = [
-    {file = "validators-0.18.0-py3-none-any.whl", hash = "sha256:4141444ae44a5deb8e9ca5785ccdf26c6297cd6d23faacb8c8f26a7543f45ecf"},
-    {file = "validators-0.18.0.tar.gz", hash = "sha256:bad0cf89a7f2e0aa9c4b76fa5f1d2309125a2c77eb176f03b89a6d5059271e63"},
+    {file = "validators-0.18.1-py3-none-any.whl", hash = "sha256:f787632edf9e054e9cf580d3016f5b0e9ad83b8a00a258b71406db0456e17007"},
+    {file = "validators-0.18.1.tar.gz", hash = "sha256:1a653b33c0ab091790f65f42b61aa191e354ed5fdedfeb17d24a86d0789966d7"},
 ]
 wemake-python-styleguide = [
     {file = "wemake-python-styleguide-0.14.1.tar.gz", hash = "sha256:e13dc580fa56b7b548de8da170bccb8ddff2d4ab026ca987db8a9893bf8a7b5b"},
