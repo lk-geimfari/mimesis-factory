@@ -9,7 +9,7 @@ style = "https://raw.githubusercontent.com/wemake-services/wemake-python-stylegu
 
 [tool.poetry]
 name = "mimesis_factory"
-version = "1.1.0"
+version = "1.2.0"
 description = "Mimesis integration with factory_boy"
 
 license = "MIT"

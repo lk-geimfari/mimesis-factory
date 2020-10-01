@@ -1,6 +1,13 @@
 # Version history
 
 
+## Version 1.2.0
+
+### Features
+
+- Updates `factory-boy` to the latest version
+
+
 ## Version 1.1.0
 
 ### Features
