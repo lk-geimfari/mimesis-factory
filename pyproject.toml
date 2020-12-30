@@ -42,7 +42,7 @@ mimesis = "^4.0"
 
 [tool.poetry.dev-dependencies]
 pytest-cov = "^2.10"
-pytest-factoryboy = "^2.0"
+pytest-factoryboy = "^2.1"
 pytest-randomly = "^3.5"
 pytest = "^6.2"
 
