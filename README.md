@@ -1,7 +1,7 @@
 ## mimesis_factory
 
 [![test](https://github.com/mimesis-lab/mimesis-factory/workflows/test/badge.svg?branch=master&event=push)](https://github.com/mimesis-lab/mimesis-factory/actions?query=workflow%3Atest)
-[![Coverage](https://coveralls.io/repos/github/mimesis-lab/mimesis-factory/badge.svg?branch=master)](https://coveralls.io/github/mimesis-lab/mimesis-factory?branch=master)
+[![codecov](https://codecov.io/gh/mimesis-lab/mimesis-factory/branch/master/graph/badge.svg?token=WYTXPoQKPm)](https://codecov.io/gh/mimesis-lab/mimesis-factory)
 [![PyPI version](https://badge.fury.io/py/mimesis-factory.svg)](https://badge.fury.io/py/mimesis-factory)
 [![wemake-python-styleguide](https://img.shields.io/badge/style-wemake-000000.svg)](https://github.com/wemake-services/wemake-python-styleguide)
 
