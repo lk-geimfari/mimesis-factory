@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 import factory
 import pytest
 import validators

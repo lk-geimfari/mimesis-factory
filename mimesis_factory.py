@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 import contextlib
 from typing import (
     Any,
@@ -15,7 +13,8 @@ from typing import (
 from factory import declarations
 from mimesis import locales
 from mimesis.providers.base import BaseProvider
-from mimesis.schema import Field, Generic
+from mimesis.providers.generic import Generic
+from mimesis.schema import Field
 
 _CacheKey = Tuple[str, Any]
 _Providers = Iterable[Type[BaseProvider]]
