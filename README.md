@@ -1,8 +1,9 @@
 ## mimesis_factory
 
-[![Build Status](https://travis-ci.com/mimesis-lab/mimesis-factory.svg?branch=master)](https://travis-ci.com/mimesis-lab/mimesis-factory)
+[![test](https://github.com/mimesis-lab/mimesis-factory/workflows/test/badge.svg?branch=master&event=push)](https://github.com/mimesis-lab/mimesis-factory/actions?query=workflow%3Atest)
 [![Coverage](https://coveralls.io/repos/github/mimesis-lab/mimesis-factory/badge.svg?branch=master)](https://coveralls.io/github/mimesis-lab/mimesis-factory?branch=master)
-[![PyPI version](https://badge.fury.io/py/mimesis-factory.svg)](https://badge.fury.io/py/mimesis-factory) [![wemake-python-styleguide](https://img.shields.io/badge/style-wemake-000000.svg)](https://github.com/wemake-services/wemake-python-styleguide)
+[![PyPI version](https://badge.fury.io/py/mimesis-factory.svg)](https://badge.fury.io/py/mimesis-factory)
+[![wemake-python-styleguide](https://img.shields.io/badge/style-wemake-000000.svg)](https://github.com/wemake-services/wemake-python-styleguide)
 
 
 <a href="https://github.com/mimesis-lab/mimesis-factory">

@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 import factory
 
 from mimesis_factory import MimesisField
