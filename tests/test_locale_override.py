@@ -22,7 +22,7 @@ class PersonFactory(factory.Factory):
 
 
 def test_data_with_different_locales(person):
-    for letter in person.full_name_en.replace(' ', ''):
+    for letter in person.full_name_en.replace(' ', '').replace("'", ''):
         assert letter in string.ascii_letters
 
     for russian_letter in person.full_name_ru.replace(' ', ''):
