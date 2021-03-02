@@ -13,10 +13,12 @@ class Person(object):
 
     @property
     def full_name_en(self) -> str:
+        """Some names have special symbols in them."""
         return self._full_name_en.replace(' ', '').replace("'", '')
 
     @property
     def full_name_ru(self) -> str:
+        """Some names have special symbols in them."""
         return self._full_name_ru.replace(' ', '').replace("'", '')
 
 
