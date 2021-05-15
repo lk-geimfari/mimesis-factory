@@ -41,9 +41,9 @@ factory-boy = ">=2.11,<4.0"
 mimesis = "^4.0"
 
 [tool.poetry.dev-dependencies]
-pytest-cov = "^2.11"
+pytest-cov = "^2.12"
 pytest-factoryboy = "^2.1"
-pytest-randomly = "^3.7"
+pytest-randomly = "^3.8"
 pytest = "^6.2"
 
 wemake-python-styleguide = "^0.15"
