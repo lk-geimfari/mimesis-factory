@@ -51,5 +51,5 @@ flake8-pytest-style = "^1.5"
 nitpick = "^0.26"
 
 validators = "^0.18"
-mypy = "^0.902"
+mypy = "^0.910"
 safety = "^1.10"
