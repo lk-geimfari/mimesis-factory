@@ -1,3 +1,8 @@
+# ⛔️ DEPRECATED
+
+This repository is now deprecated. We have integrated ``mimesis-factory`` into mimesis itself, and there is no longer a need to use a separate package. 
+Refer to the [Integration with factory_boy](https://mimesis.name/en/master/factory_plugin.html) section for more details.
+
 ## mimesis_factory
 
 [![test](https://github.com/mimesis-lab/mimesis-factory/workflows/test/badge.svg?branch=master&event=push)](https://github.com/mimesis-lab/mimesis-factory/actions?query=workflow%3Atest)
